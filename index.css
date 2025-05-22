@@ -5,10 +5,17 @@
 }
 
 :root {
+    --main: white;
+    --back-round: white;
+    --indicator: #BFBFBF;
+    --round: #2284B5;
+}
+
+.darkmode {
     --main: black;
     --back-round: white;
     --indicator: #BFAEA4;
-
+    --round: white;
 }
 
 body {
@@ -20,23 +27,41 @@ body {
     overflow: hidden;
 }
 
+.nav-bar {
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
 .navigation {
     position: relative;
     width: 95vw;
     margin-top: -40%;
-    margin-left: -1%;
+    margin-left: -250%;
     height: 10vh;
-    background: var(--back-round);
+    background: var(--round);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 2em;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    overflow-y: auto;
 }
+
+.navigation.active {
+    left: 250;
+}
+
 
 .navigation ul {
     display: flex;
-    width: 90vw;
-    gap: 20%;
+    width: 50vw;
+    gap: 15%;
+    margin-left: -35%;
 }
 
 .navigation ul li {
@@ -74,23 +99,23 @@ body {
 }
 
 .navigation ul li .icon svg {
-    stroke: #1E1E1E; 
-    transition: stroke 0.3s ease;  
+    stroke: #1E1E1E;
+    transition: stroke 0.3s ease;
 }
 
 .navigation ul li .text {
     margin-left: 10px;
-    color: #1E1E1E;  
-    transition: color 0.3s ease; 
+    color: #1E1E1E;
+    transition: color 0.3s ease;
 }
 
 
 .navigation ul li:hover .icon svg {
-    stroke: #8C1B1B; 
+    stroke: #8C1B1B;
 }
 
 .navigation ul li:hover .text {
-    color: var(--main);  
+    color: var(--main);
 }
 
 .navigation ul li:hover a .icon {
@@ -119,7 +144,7 @@ body {
     top: -43%;
     width: 6vw;
     height: 9vh;
-    left: 4.7%;
+    left: 8.2%;
     background: var(--indicator);
     border-radius: 50%;
     border: 6px solid var(--main);
@@ -145,9 +170,9 @@ body {
 }
 
 
-.navigation ul li:hover ~ .indicator {
+.navigation ul li:hover~.indicator {
     opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease; 
+    transition: opacity 0.3s ease, transform 0.3s ease;
     background-color: var(--indicator);
     color: var(--img);
 }
@@ -166,19 +191,45 @@ body {
     background: transparent;
 }
 
-.navigation ul li:nth-child(1):hover ~ .indicator {
-    transform: translateX(calc(28px * 0));
-}
-.navigation ul li:nth-child(2):hover ~ .indicator {
-    transform: translateX(calc(28vw * 1));
-}
-.navigation ul li:nth-child(3):hover ~ .indicator {
-    transform: translateX(calc(28vw * 2));
-}
-.navigation ul li:nth-child(4):hover ~ .indicator {
-    transform: translateX(calc(28vw * 3));
-}
-.navigation ul li:nth-child(5):hover ~ .indicator {
-    transform: translateX(calc(28vw * 4));
+.navigation ul li:nth-child(1):hover~.indicator {
+    transform: translateX(calc(17vw * 0));
 }
 
+.navigation ul li:nth-child(2):hover~.indicator {
+    transform: translateX(calc(17.5vw * 1));
+}
+
+.navigation ul li:nth-child(3):hover~.indicator {
+    transform: translateX(calc(17.5vw * 2));
+}
+
+.navigation ul li:nth-child(4):hover~.indicator {
+    transform: translateX(calc(17.5vw * 3));
+}
+
+.navigation ul li:nth-child(5):hover~.indicator {
+    transform: translateX(calc(17.5vw * 4));
+}
+
+.dark-light {
+    width: 3vw;
+    height: 5vh;
+    margin-left: -5%;
+    border-radius: 5em;
+    margin-top: -25%;
+    border: none;
+}
+
+.dark-light svg:first-child {
+    display: none;
+}
+
+
+.darkmode .dark-light svg:last-child {
+    display: none;
+}
+
+.darkmode .dark-light svg:first-child {
+    display: block;
+    margin-left: 30%;
+}

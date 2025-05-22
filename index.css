@@ -32,16 +32,16 @@ body {
     top: 1%;
     left: 1%;
     cursor: pointer;
-    background-color: white;
+    background-color: transparent;
     border: none;
 }
 
 .navigation {
     position: relative;
     width: 95vw;
-    margin-top: -40%;
+    margin-top: -30%;
     margin-left: -250%;
-    height: 10vh;
+    height: 17vh;
     background: var(--round);
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@ body {
 }
 
 .navigation.active {
-    left: 250;
+    left: 245%;
 }
 
 
@@ -141,9 +141,9 @@ body {
 
 .indicator {
     position: absolute;
-    top: -43%;
+    top: -27%;
     width: 6vw;
-    height: 9vh;
+    height: 11vh;
     left: 8.2%;
     background: var(--indicator);
     border-radius: 50%;
@@ -155,7 +155,7 @@ body {
 .indicator::before {
     content: '';
     position: absolute;
-    top: 46%;
+    top: 34%;
     left: -46%;
     width: 2.5vw;
     height: 2vh;
@@ -181,7 +181,7 @@ body {
 .indicator::after {
     content: '';
     position: absolute;
-    top: 46%;
+    top: -34%;
     right: -46%;
     width: 2.5vw;
     height: 2vh;
@@ -214,7 +214,7 @@ body {
 .dark-light {
     width: 3vw;
     height: 5vh;
-    margin-left: -5%;
+    margin-left: 240%;
     border-radius: 5em;
     margin-top: -25%;
     border: none;

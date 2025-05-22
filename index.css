@@ -5,9 +5,10 @@
 }
 
 :root {
-    --clr: black;
-    --whi: white;
-    --red: grey;
+    --main: black;
+    --back-round: white;
+    --indicator: #BFAEA4;
+
 }
 
 body {
@@ -15,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: var(--clr);
+    background: var(--main);
     overflow: hidden;
 }
 
@@ -25,11 +26,11 @@ body {
     margin-top: -40%;
     margin-left: -1%;
     height: 10vh;
-    background: var(--whi);
+    background: var(--back-round);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3em;
+    border-radius: 2em;
 }
 
 .navigation ul {
@@ -69,7 +70,27 @@ body {
     font-size: 1rem;
     text-align: center;
     transition: 0.5s;
-    color: var(--clr);
+    color: var(--main);
+}
+
+.navigation ul li .icon svg {
+    stroke: #1E1E1E; 
+    transition: stroke 0.3s ease;  
+}
+
+.navigation ul li .text {
+    margin-left: 10px;
+    color: #1E1E1E;  
+    transition: color 0.3s ease; 
+}
+
+
+.navigation ul li:hover .icon svg {
+    stroke: #8C1B1B; 
+}
+
+.navigation ul li:hover .text {
+    color: var(--main);  
 }
 
 .navigation ul li:hover a .icon {
@@ -79,7 +100,7 @@ body {
 
 .navigation ul li a .text {
     position: absolute;
-    color: var(--clr);
+    color: var(--main);
     font-weight: 400;
     font-size: 0.75rem;
     letter-spacing: 0.05rem;
@@ -99,9 +120,9 @@ body {
     width: 6vw;
     height: 9vh;
     left: 4.7%;
-    background: var(--red);
+    background: var(--indicator);
     border-radius: 50%;
-    border: 6px solid var(--clr);
+    border: 6px solid var(--main);
     transition: 0.5s;
     background: transparent;
 }
@@ -113,9 +134,9 @@ body {
     left: -46%;
     width: 2.5vw;
     height: 2vh;
-    background-color: var(--red);
+    background-color: var(--indicator);
     border-top-right-radius: 2em;
-    box-shadow: 1px -10px 0 0 var(--clr);
+    box-shadow: 1px -10px 0 0 var(--main);
     background: transparent;
 }
 
@@ -127,7 +148,7 @@ body {
 .navigation ul li:hover ~ .indicator {
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease; 
-    background-color: var(--red);
+    background-color: var(--indicator);
     color: var(--img);
 }
 
@@ -139,9 +160,9 @@ body {
     right: -46%;
     width: 2.5vw;
     height: 2vh;
-    background-color: var(--red);
+    background-color: var(--indicator);
     border-top-left-radius: 2em;
-    box-shadow: -1px -10px 0 0 var(--clr);
+    box-shadow: -1px -10px 0 0 var(--main);
     background: transparent;
 }
 
@@ -160,3 +181,4 @@ body {
 .navigation ul li:nth-child(5):hover ~ .indicator {
     transform: translateX(calc(28vw * 4));
 }
+

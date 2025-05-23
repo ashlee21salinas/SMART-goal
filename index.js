@@ -1,3 +1,6 @@
+particlesJS.load('particles-js', 'particles.json');
+
+
 const list = document.querySelectorAll('.list');
 function activeLink() {
     list.forEach((item) =>
@@ -38,3 +41,5 @@ const navigation = document.querySelector('.navigation');
 navButton.addEventListener('click', () => {
   navigation.classList.toggle('active');
 });
+
+

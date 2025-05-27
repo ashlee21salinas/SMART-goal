@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: aqua;
+}
+
+.wrapper {
+    background: white;
+    width: 50vw;
+    border-radius: 1em;
+    padding: 2%;
+}
+
+.wrapper .content-box {
+    padding: 2% 2% 0;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+
+.typing-text p {
+    font-size: 1.5rem;
+    text-align: justify;
+    letter-spacing: 2px;
+    word-break: break-all;
+
+}
+
+.content-box  .typing-text {
+    max-height: 20vh;
+    overflow-y: auto;
+}
+
+.typing-text::-webkit-scrollbar {
+    width: 0;
+}
+
+.content-box .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+    padding: 2% 0;
+    border-top: 1px solid black;
+}
+
+.content .result-details {
+    display: flex;
+    width: calc(100% - 15%);
+    justify-content: space-between;
+}
+
+.result-details li {
+    list-style: none;
+    display: flex;
+    height: 3vh;
+    align-items: center;
+
+}
+
+.result-details li span {
+    display: block;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.result-details li  p {
+    font-size: 1.5rem;
+}
+
+.result-details li:not(:first-child) {
+    border-left:  1px solid black;
+    padding-left: 8%;
+}
+
+.result-details li b {
+    font-weight: 200;
+}
+
+.result-details li:not() span

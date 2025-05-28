@@ -34,6 +34,41 @@ body {
 
 }
 
+.typing-text p span {
+    position: relative;
+}
+
+.typing-text p span.correct {
+    color: green;
+}
+.typing-text p span.incorrect {
+    color: red;
+    background: pink;
+    outline: 1px solid white;
+    border-radius: 1%;
+}
+
+.typing-text p span.active {
+    color: aqua;
+}
+
+.typing-text p span.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2%;
+    width: 100%;
+    opacity: 0;
+    background: aqua;
+    animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+
 .content-box  .typing-text {
     max-height: 20vh;
     overflow-y: auto;

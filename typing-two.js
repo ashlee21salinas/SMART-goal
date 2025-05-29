@@ -66,6 +66,10 @@ function initTyping() {
         clearInterval(timer);
     }
 
+    characters.forEach(span => span.classList.remove("active"));
+    characters[charIndex].classList.add("active");
+    characters[charIndex].scrollIntoView({ behavior: "smooth", block: "center" });
+
 }
 
 function initTimer() {
@@ -73,7 +77,8 @@ function initTimer() {
         timeLeft--;
         time.innerText = timeLeft;
     } else {
-        clearInterval(timer)
+        clearInterval(timer);
+        showPopup();
     }
 }
 
@@ -83,11 +88,20 @@ function resetGame() {
     inpField.value = "";
     clearInterval(timer);
     timeLeft = maxTime,
-    charIndex = mistakes = isTyping = 0;
+        charIndex = mistakes = isTyping = 0;
     time.innerText = timeLeft;
     mistakeTag.innerHTML = mistakes;
     wpmTag.innerText = 0;
     cpmTag.innerText = 0;
+}
+
+function closePopup() {
+    resetGame();
+    document.getElementById("popupAfterEnd").style.display = "none";
+}
+
+function showPopup() {
+    document.getElementById("popupAfterEnd").style.display = "flex";
 }
 
 randomParagraph();

@@ -38,6 +38,11 @@ body {
 
 }
 
+.typing-text {
+    max-height: 200px; 
+    overflow-y: auto;
+}
+
 .typing-text p span {
     position: relative;
 }
@@ -45,6 +50,7 @@ body {
 .typing-text p span.correct {
     color: green;
 }
+
 .typing-text p span.incorrect {
     color: red;
     background: pink;
@@ -142,5 +148,48 @@ body {
 }
 
 .content button:active {
+    transform: scale(0.97);
+}
+
+/* popup */
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    padding: 10%;
+    width: 55vw;
+    height: 50vh;
+    position: absolute;
+    left: 25%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    display: none;
+}
+
+.popup h2 {
+    font-size: 4rem;
+    margin-top: -10%;
+}
+
+.popup p {
+    font-size: 2.5rem;
+    margin-top: 3%;
+}
+
+#popupbtn {
+    width: 10vw;
+    height: 9vh;
+    font-size: 1.5rem;
+    margin-left: 35%;
+    margin-top: 5%;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1%;
+    transition: transform 0.3s ease;
+}
+
+.popup #popupbtn:active {
     transform: scale(0.97);
 }

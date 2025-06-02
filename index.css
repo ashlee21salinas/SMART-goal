@@ -161,6 +161,7 @@ body {
     box-shadow: 1px -10px 0 0 var(--main);
     background: transparent;
 }
+
 .indicator::after {
     content: '';
     position: absolute;
@@ -232,6 +233,3 @@ body {
 }
 
 /* BACKGROUND */
-
-
-

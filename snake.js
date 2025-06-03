@@ -1,6 +1,7 @@
 const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
+const controls = document.querySelectorAll(".controls svg")
 
 let gameOver = false;
 let foodX, foodY;
@@ -12,7 +13,7 @@ let score = 0;
 
 //this gets the highscore from local storage
 let highScore = localStorage.getItem("high-score") || 0;
-highScoreElement.innerText= `High Score: ${score}`;
+highScoreElement.innerText= `High Score: ${highScore}`;
 
 
 const changeFoodPostion = () => {
@@ -47,6 +48,11 @@ const changeDirection = (e) => {
     initGame();
 }
 
+controls.forEach(key => {
+    // calls change firection on each key that is pressed
+    key.addEventListener("click", () => changeDirection({ key: key.dataset.key }));
+})
+
 const initGame = () => {
     if(gameOver) return handleGameOver()
     let htmlMarkup = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
@@ -57,10 +63,11 @@ const initGame = () => {
         snakeBody.push([foodX, foodY]); // makes food go into bodies array
         score++; // +1 when interacted with food
 
-        highScore = score>= highScore ? score : highScore;
+        //high score number
+        highScore = score >= highScore ? score : highScore;
         localStorage.setItem("high-score", highScore);
         scoreElement.innerText= `Score: ${score}`;
-        highScoreElement.innerText= `High Score: ${score}`;
+        highScoreElement.innerText= `High Score: ${highScore}`;
 
     }
 

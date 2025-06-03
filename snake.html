@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="snake.css">
     <script src="snake.js" defer></script>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="game-details">
@@ -14,6 +16,28 @@
             <span class="high-score">High Score: 0</span>
         </div>
         <div class="play-board"></div>
+        <div class="controls">
+            <svg data-key="ArrowLeft" id="left" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M38 24H10M10 24L24 38M10 24L24 10" stroke="white" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            </svg>
+            <svg data-key="ArrowUp" id="up" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 38V10M24 10L10 24M24 10L38 24" stroke="white" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            </svg>
+            <svg data-key="ArrowRight" id="right" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 24H38M38 24L24 10M38 24L24 38" stroke="white" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+            <svg data-key="ArrowDown" id="dowm" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 10V38M24 38L38 24M24 38L10 24" stroke="white" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+
+        </div>
     </div>
 </body>
+
 </html>

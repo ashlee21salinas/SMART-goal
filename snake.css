@@ -47,7 +47,7 @@ body {
     height: 100%;
     background-color: var(--under-board);
     display: grid;
-    grid-template: repeat(30, 1fr) / repeat(50, 1fr); 
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr); 
     /* this makes grid of board */
 }
 

@@ -5,9 +5,9 @@
 }
 
 :root {
-    --board-color: #293447;
-    --back-color: #E3F2FD;
-    --under-board: #212837;
+    --board-color: #8C7446;
+    --back-color: black;
+    --under-board: #C5DB32;
     --food: red;
     --snake: #60CBFF;
 }
@@ -29,6 +29,11 @@ body {
     flex-direction: column;
     background-color: var(--board-color);
 
+}
+
+.play-board .body {
+    background-color: green;
+    border: 1px solid green;
 }
 
 .game-details {
@@ -53,10 +58,12 @@ body {
 
 .play-board .food {
     background: var(--food);
+    border: 2px solid darkred;
 }
 
 .play-board .head {
-    background: var(--snake);
+    background: green;
+    border: 2px solid darkgreen;
 }
 
 .controls {

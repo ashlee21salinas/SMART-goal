@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: aqua;
+    background-color: #D9D0D0;
 }
 
 .wrapper {
@@ -70,7 +70,7 @@ body {
     height: 2%;
     width: 100%;
     opacity: 0;
-    background: aqua;
+    background: #D9D0D0;
     animation: blink 1s ease-in-out infinite;
 }
 @keyframes blink {

@@ -70,7 +70,7 @@ body {
     height: 2%;
     width: 100%;
     opacity: 0;
-    background: #D9D0D0;
+    background: aqua;
     animation: blink 1s ease-in-out infinite;
 }
 @keyframes blink {
@@ -138,7 +138,7 @@ body {
     border: none;
     outline: none;
     width: 5vw;
-    background: aqua;
+    background: #D9D0D0;
     padding: 1% 0;
     color: white;
     cursor: pointer;

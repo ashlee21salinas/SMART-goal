@@ -21,8 +21,8 @@ body {
 }
 
 .wrapper {
-    width: 65vw;
-    height: 75vh;
+    width: 90vmin;
+    height: 90vmin;
     border-radius: 2%;
     display: flex;
     overflow: hidden;
@@ -75,8 +75,8 @@ body {
 
 @media screen and (max-width: 800px) {
     .wrapper {
-        width: 65vw;
-        height: 75vh;
+        width: 65vmin;
+        height: 65vmin;
     }
     
     .game-details {

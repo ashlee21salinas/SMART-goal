@@ -194,3 +194,25 @@ body {
 .popup #popupbtn:active {
     transform: scale(0.97);
 }
+
+
+@media screen and (max-width: 1668px) and (min-width: 1619px) {
+    .result-details li:not(:first-child) {
+        padding-left: 6%;
+    }
+}
+
+@media screen and (max-width: 1616px) and (min-width: 1590px) {
+    .result-details li:not(:first-child) {
+        padding-left: 4%;
+    }
+}
+
+@media screen and (max-width: 1582px) and (min-width: 1500px) {
+    .result-details li p {
+        font-size: 1rem;
+    }
+    .result-details li span {
+        font-size: 1rem;
+    }
+}

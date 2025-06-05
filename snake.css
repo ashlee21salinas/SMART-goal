@@ -32,8 +32,8 @@ body {
 }
 
 .play-board .body {
-    background-color: green;
-    border: 1px solid green;
+    background-color: pink;
+    border: 1px solid red;
 }
 
 .game-details {
@@ -57,13 +57,17 @@ body {
 }
 
 .play-board .food {
-    background: var(--food);
-    border: 2px solid darkred;
+    background-image: url('/img/minecraft-apple.webp') !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .play-board .head {
-    background: green;
-    border: 2px solid darkgreen;
+    background: pink;
+    border: 2px solid red;
 }
 
 .controls {
